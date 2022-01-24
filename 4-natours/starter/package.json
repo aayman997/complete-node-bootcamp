@@ -4,15 +4,16 @@
 	"description"    : "Learning node, express and mongoDB",
 	"main"           : "server.js",
 	"scripts"        : {
-		"start:dev" : "nodemon server.js",
+		"start"     : "nodemon server.js",
 		"start:prod": "nodemon server.js"
 	},
 	"author"         : "Ahmed Ayman",
 	"license"        : "ISC",
 	"dependencies"   : {
-		"dotenv" : "^14.2.0",
-		"express": "^4.17.2",
-		"morgan" : "^1.10.0"
+		"dotenv"  : "^14.2.0",
+		"express" : "^4.17.2",
+		"mongoose": "^5.13.14",
+		"morgan"  : "^1.10.0"
 	},
 	"devDependencies": {
 		"eslint"                : "^8.7.0",
