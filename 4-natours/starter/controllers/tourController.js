@@ -65,8 +65,8 @@ exports.createTour = async (req, res) => {
     });
   } catch (err) {
     res.status(400).json({
-      status: 'fail',
-      message: 'Invalid data sent!',
+      status: 'fail', // message: 'Invalid data sent!',
+      message: err,
     });
   }
 };
@@ -125,8 +125,7 @@ exports.getTourStats = async (req, res) => {
       },
       {
         $sort: { avgPrice: 1 },
-      },
-      // {
+      }, // {
       //   $match: { _id: { $ne: 'EASY' } },
       // },
     ]);
@@ -163,8 +162,7 @@ exports.getMonthlyPlan = async (req, res) => {
         $group: {
           _id: { $month: '$startDates' },
           numTourStarts: { $sum: 1 },
-          tours: { $push: '$name' },
-          // ids: { $push: '$_id' },
+          tours: { $push: '$name' }, // ids: { $push: '$_id' },
         },
       },
       {
